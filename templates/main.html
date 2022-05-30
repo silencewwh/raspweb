@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动灌溉系统</title>
+    <script src="../static/jquery-2.2.4.min.js"></script>
+    <script src="../static/jquery.appear.min.js"></script>
+    <script src="../static/jquery.easypiechart.min.js"></script> 
+
+
+    <script src="../static/socket.io.min.js"></script>
+    
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel= "stylesheet" href= "../static/styles/main.css">
+    <script src="../static/loadingpage.js"></script>
+    <script src="../static/highcharts.js"></script>
+    <script src="../static/highcharts-more.js"></script>
+    <script src="../static/solid-gauge.js"></script>
+    <script src="../static/exporting.js"></script>
+    <script src="../static/export-data.js"></script>
+    <script src="../static/accessibility.js"></script>
+    <script src="../static/scroll-anchor.js"></script>
+    <script src="../static/mqtt.min.js"></script>
+    <script src="../static/websocket.js"></script>
+ 
+ 
+
+
+     
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn" style="position: fixed;z-index: 3;"></i>
+    </label>
+   
+  <!-- 侧边菜单  -->
+    <div class="sidebar">
+        <label for="check">
+        <header>your App</header>
+    </label>
+        <ul class="menu">
+            <li><a href="#A1"><i class="fa fa-home"></i>主页</a></li>
+            <li><a href="#A2"><i class="fa fa-thermometer"></i>温湿度</a></li>
+            <li><a href="#A3"><i class="fa fa-area-chart"></i>Overview</a></li>
+            <li><a href="#A4"><i class="fa fa-dashboard"></i>Events</a></li>
+            <li><a href="#A5"><i class="fa fa-male"></i>About</a></li>
+        </ul>
+    </div>
+
+  <!-- 加载页面 -->
+<div class="loaddesk" id="loaddesk">
+  <p id="loadnum" class="loadnum"></p>
+  <p class="loadstr">Good things come to those who wait . . .</p>
+  <embed id="loadimg" src="../static/styles/raspberry-pi_animated.svg"></embed>
+  <div id="mask"></div>
+     </div>
+
+     <!-- 主页面 -->
+    <div class="wrapper" id="wrapper">
+
+    <section class="section" id="A1"><h2 style="margin-left: 50%;">home1</h2>
+    </section>
+    
+    <section class="section" id="A2">
+        <figure class="highcharts-figure" >
+            <div id="container1"></div>
+        </figure>
+    </section>
+    
+    <section class="section" id="A3" style="background-color: blue !important;"><h2 style="margin-left: 50%;">home3</h2>
+        <figure class="highcharts-figure" >
+            <div id="container2"></div>
+        </figure>
+    </section>
+    </div>
+    
+    <script type="text/javascript" src="../static/circle1.js"></script>
+    <!-- <script type="text/javascript" src="../static/circle2.js"></script> -->
+</body>
+</html>

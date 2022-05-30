@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    touch-action:pan-y pinch-zoom;
+}
+
+
+.body{
+    font-size: 100%;
+    background-color: white;
+    scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+:root{scroll-behavior: smooth;}
+
+.menu{
+    z-index: 1;
+}
+
+.sidebar{
+    position: fixed;
+    z-index: 2;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #111111;
+    transition: all .5s ease;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #232323;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+    background: #777777;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+
+#check{
+    display: none;
+}
+
+label #btn{
+    position: absolute;
+    cursor: pointer;
+}
+
+label #btn{
+    left: 5%;
+    top: 5%;
+    font-size: 50px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #btn:hover{
+    color: #4e4e4e;
+}
+
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+    transition:all .5s;
+}
+
+#check:not(:checked) ~ label #btn{
+    transition:all .5s;
+}
+
+
+#check:checked ~ section{
+    margin-left: 250px;
+}
+
+.section{
+    background:#000000;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all 1s;
+    position: relative;
+}
+
+.wrapper{
+    position:relative;
+    max-width: 100%;
+    height:100vh;
+    margin: 0 auto;
+    overflow:hidden;
+    
+    
+}
+
+
+#container1,
+#container2
+ {
+    max-width: 1300px;
+    margin:0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 380px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+#loaddesk{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(193, 23, 23);
+    z-index: 5;
+    opacity: 100%;
+    transition: all 1s;
+    /* visibility:visible; */
+    overflow:hidden
+}
+.loadnum{
+    position: absolute;
+    margin:0 auto;
+    top: 85%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    font-size: 13em;
+    /* opacity: 40%; */
+    color: white;
+    font-family: confident;
+}
+.loadstr{
+    position:absolute;
+    /* opacity: 40%; */
+    color: white;
+    top: 70%;
+    left: 11%;
+    transform: translate(-50%,-50%);
+    font-size: 1em; 
+    margin: 0 auto;
+    z-index: 8;
+    font-family: confident;
+}
+#loadimg{
+    height:40%;
+    position: absolute;
+    left: 50%;top:50%;
+    opacity: 70%;
+    transform: translate(-50%,-50%);
+    transition:height 5s ease;
+    z-index:9;
+}
+#mask{
+    background-color: black;
+    height: 100%;
+    width: 0%;
+    transition: all .5s;
+    z-index:7;
+}
+
