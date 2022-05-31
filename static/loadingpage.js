@@ -69,6 +69,7 @@ function up(loadmv){
             document.getElementById("loaddesk").style.opacity="0%";
             document.getElementById("loaddesk").style.visibility="hidden";
             document.getElementById("wrapper").style.overflow="visible";
+            document.getElementById("wrapper").style.height="300vh";
             
         }
         else{
