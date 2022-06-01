@@ -14,7 +14,6 @@
         for(var i = 0 ; i < a.length ; i++) {
           var t = a[i].getClientRects()[0].top;
           if(t >= 30) break;
-          console.log("up")
         }
       }
       else {

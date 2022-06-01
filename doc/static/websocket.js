@@ -3,7 +3,7 @@ const options = {
   clean: true,
   connectTimeout: 4000,
   // Auth
-  clientId: 'emqx_test',
+  clientId: Number(Math.random().toString()+ Date.now()).toString(36),
   username: 'silence',
   password: 'silence0802',
 }
@@ -13,11 +13,13 @@ client.on('connect', function () {
   client.subscribe('test1')
 })
 
-client.on('message', function (topic, message) {
+client.on('message', function (message) {
     // message is Buffer
     var obj = JSON.parse(message);
     console.log(obj)
     tempdata=Number(obj.temp)
     humpdata=Number(obj.hump)
     dirthumpdata=Number(obj.dirthump)
+    sundata=Number(obj.sun)
+    pressdata=Number(obj.press)
   })

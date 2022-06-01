@@ -1,3 +1,11 @@
+@font-face {
+
+    font-family: 'ZCOOL XiaoWei';
+    
+    src: url('./ZCOOLXiaoWei-Regular.ttf');
+    
+    }
+
 *{
     margin: 0;
     padding: 0;
@@ -15,24 +23,33 @@
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
   overflow-y: auto;
+}
 
+p{
+    -moz-user-select:none; 
+-moz-user-select: none; 
+-o-user-select:none; 
+-khtml-user-select:none; 
+-webkit-user-select:none; 
+-ms-user-select:none; 
+ user-select:none;
 }
 
 #homepagetext
  {
     color: #fff;
     position: relative;
-    font-family: sans-serif;
+    font-family: 'ZCOOL XiaoWei', serif;
     font-size: 4em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);
+    background: linear-gradient(90deg, #111111, #fff, #111111);
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animate 6s linear infinite;
+    animation: animate 8s linear infinite;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: rgba(211, 19, 19, 0);
     position: absolute;
     top:50%;
     left: 50%;
@@ -67,6 +84,7 @@
     height: 100%;
     background: #111111;
     transition: all .5s ease;
+    border-radius: 10px;
 }
 
 .sidebar header{
@@ -74,8 +92,10 @@
     color: white;
     text-align: center;
     line-height: 70px;
-    background: #232323;
+    background: #191919;
     user-select: none;
+    border-radius: 10px;
+    border-bottom:1px solid black;
 }
 
 .sidebar ul a{
@@ -87,14 +107,20 @@
     color: white;
     padding-left: 40px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(255,255,255,.1);
     border-bottom: 1px solid black;
-    transition: .4s;
+    transition: .4s;;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+ul li{
+    padding-right: 5%;
+    padding-left: 3%;
 }
 
 ul li:hover a{
     padding-left: 50px;
-    background: #777777;
+    box-shadow: -5px -5px 9px rgba(40, 40, 40, 0.45), 5px 5px 9px rgba(41, 45, 52, 0.3);
 }
 
 .sidebar ul a i{
@@ -146,7 +172,7 @@ label #btn:hover{
 }
 
 .section{
-    background:#000000;
+    background:#141414;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -234,35 +260,43 @@ label #btn:hover{
 .loadnum{
     position: absolute;
     margin:0 auto;
-    top: 85%;
-    left: 10%;
-    transform: translate(-50%,-50%);
+    top: 73%;
+    left:5%;
     font-size: 13em;
     /* opacity: 40%; */
     color: white;
-    font-family: confident;
 }
 .loadstr{
     position:absolute;
     /* opacity: 40%; */
     color: white;
     top: 70%;
-    left: 11%;
-    transform: translate(-50%,-50%);
+    left: 5%;
     font-size: 1em; 
     margin: 0 auto;
     z-index: 8;
-    font-family: confident;
 }
 #loadimg{
     height:40%;
     position: absolute;
-    left: 50%;top:50%;
+    left:50%;
+    top:50%;
     opacity: 70%;
     transform: translate(-50%,-50%);
     transition:height 5s ease;
     z-index:9;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
+@keyframes floating {
+    from { transform: translate(-50%,  -50%); }
+    50%  { transform: translate(-50%, -45%); }
+    to   { transform: translate(-50%, -50%); }    
+}
+
+
 #mask{
     background-color: black;
     height: 100%;
@@ -280,3 +314,90 @@ label #btn:hover{
     right: 0;
     z-index: 1;
   }
+  #container2{
+      background-color: #141414;
+      border-radius: 20px;
+      box-shadow: -5px -5px 9px rgba(40, 40, 40, 0.45), 5px 5px 9px rgba(41, 45, 52, 0.3);
+      z-index: 3;
+  }
+
+  #thanktext{
+      font-size: 4em;
+      color: #fff;
+      font-family: 'ZCOOL XiaoWei', serif;  
+      position: absolute;
+      top:40%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 3;
+  }
+
+  #logotext{
+
+    font-size: 4em;
+    color: #fff;
+    font-family: 'ZCOOL XiaoWei', serif;  
+    position: absolute;
+    top:90%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+  }
+
+  #name{
+    font-size: 3em;
+    color: #fff;  
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+  }
+
+  #A1 a {
+    padding-top: 70px;
+  }
+  #A1 a span {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb05 {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes sdb05 {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+
+
+  
