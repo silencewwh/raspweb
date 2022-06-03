@@ -10,12 +10,21 @@ const options = {
 var client = mqtt.connect('ws://124.223.169.5:8083', options)
 client.on('connect', function () {
   console.log('Connected')
-  client.subscribe('test1')
+  client.subscribe('test1',{qos:2},function(error){
+    if(!error){
+      console.log("subscribe success")
+    }
+    else{
+      console.log("subscribe fail")
+    }
+  })
 })
 
-client.on('message', function (message) {
+client.on('message', function (topic,message) {
     // message is Buffer
-    var obj = JSON.parse(message);
+
+    const buf=message.toString();
+    const obj = JSON.parse(buf);
     console.log(obj)
     tempdata=Number(obj.temp)
     humpdata=Number(obj.hump)

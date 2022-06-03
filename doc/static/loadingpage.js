@@ -61,7 +61,7 @@ function up(loadmv){
     time5=setInterval(function(){
         
         if(start>=num-1){
-            document.getElementById("loadimg").style.height="2000%";
+            document.getElementById("loadimg").style.transform="scale(50,50)";
             start=num;
             clearInterval(time5);
             item.text(start);
