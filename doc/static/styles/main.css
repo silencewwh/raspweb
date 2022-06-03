@@ -178,6 +178,7 @@ label #btn:hover{
     height: 100vh;
     transition: all 1s;
     position: relative;
+    z-index: 1;
 }
 
 .wrapper{
@@ -251,11 +252,11 @@ label #btn:hover{
     width: 100%;
     height: 100vh;
     background-color: rgb(193, 23, 23);
-    z-index: 5;
     opacity: 100%;
     transition: all 1s;
     /* visibility:visible; */
-    overflow:hidden
+    overflow:hidden;
+    z-index: 10;
 }
 .loadnum{
     position: absolute;
@@ -312,7 +313,7 @@ label #btn:hover{
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
   }
   #container2{
       background-color: #141414;
@@ -324,7 +325,7 @@ label #btn:hover{
   #thanktext{
       font-size: 4em;
       color: #fff;
-      font-family: 'ZCOOL XiaoWei', serif;  
+      /* font-family: 'ZCOOL XiaoWei', serif;   */
       position: absolute;
       top:40%;
       left: 50%;
@@ -354,10 +355,8 @@ label #btn:hover{
     z-index: 2;
   }
 
-  #A1 a {
-    padding-top: 70px;
-  }
-  #A1 a span {
+
+  .nextpage {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -371,6 +370,8 @@ label #btn:hover{
     -webkit-animation: sdb05 1.5s infinite;
     animation: sdb05 1.5s infinite;
     box-sizing: border-box;
+    z-index:3 ;
+    cursor: pointer;
   }
   @-webkit-keyframes sdb05 {
     0% {

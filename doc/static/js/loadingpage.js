@@ -61,13 +61,14 @@ function up(loadmv){
     time5=setInterval(function(){
         
         if(start>=num-1){
-            document.getElementById("loadimg").style.transform="scale(50,50)";
+            document.getElementById("loadimg").style.height="1000%";
             start=num;
             clearInterval(time5);
             item.text(start);
             document.getElementById("mask").style.width=start+"%";
             document.getElementById("loaddesk").style.opacity="0%";
             document.getElementById("loaddesk").style.visibility="hidden";
+            document.getElementById("loaddesk").style.zIndex="0"
             document.getElementById("wrapper").style.overflow="visible";
             document.getElementById("wrapper").style.height="500vh";
             

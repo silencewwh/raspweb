@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <title>自动灌溉系统</title>
     <link rel="shortcut icon" href="./static/styles/titlelogo.png" type="image/x-icon">
-    <script src="./static/jquery-2.2.4.min.js"></script>
-    <script src="./static/jquery.appear.min.js"></script>
-    <script src="./static/jquery.easypiechart.min.js"></script> 
-    <script src="./static/particles.js"></script>
-    <script src="./static/pageani.js"></script>
-    <script src="./static/socket.io.min.js"></script>
+    <script src="./static/lib/jquery-2.2.4.min.js"></script>
+    <script src="./static/lib/jquery.appear.min.js"></script>
+    <script src="./static/lib/jquery.easypiechart.min.js"></script> 
+    <script src="./static/lib/particles.js"></script>
+
+    <script src="./static/lib/socket.io.min.js"></script>
     
 
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel= "stylesheet" href= "./static/styles/main.css">
     <link rel="stylesheet" href="./static/styles/solar.css">
-    <script src="./static/loadingpage.js"></script>
-    <script src="./static/highcharts.js"></script>
-    <script src="./static/highcharts-more.js"></script>
-    <script src="./static/solid-gauge.js"></script>
-    <script src="./static/exporting.js"></script>
-    <script src="./static/export-data.js"></script>
-    <script src="./static/accessibility.js"></script>
-    <script src="./static/scroll-anchor.js"></script>
-    <script src="./static/mqtt.min.js"></script>
-    <script src="./static/websocket.js"></script>
+    <link rel="stylesheet" href="./static/styles/intro.css">
+    <script src="./static/lib/highcharts.js"></script>
+    <script src="./static/lib/highcharts-more.js"></script>
+    <script src="./static/lib/solid-gauge.js"></script>
+    <script src="./static/lib/exporting.js"></script>
+    <script src="./static/lib/export-data.js"></script>
+    <script src="./static/lib/accessibility.js"></script>
+    <script src="./static/lib/mqtt.min.js"></script>
+
+    <script src="./static/js/pageani.js"></script>
+    <script src="./static/js/loadingpage.js"></script>
+    <script src="./static/js/scroll-anchor.js"></script>
+    <script src="./static/js/websocket.js"></script>
  
  
 
@@ -34,7 +37,7 @@
 
 <body>
     
-    <canvas class="background"></canvas>
+    
     <input type="checkbox" id="check">
     <label for="check">
         <i class="fa fa-bars" id="btn" style="position: fixed;z-index: 3;"></i>
@@ -67,8 +70,9 @@
     
 
     <section class="section" id="A1">
+        <canvas class="background"></canvas>
         <p id="homepagetext">群星是遥不可及的幻梦？</p>
-       <a href="#A2"> <span></span></a>
+        <a href="#A2"><span class="nextpage"></span></a>
 
     </section>
     
@@ -103,16 +107,124 @@
     </section>
    
     <section class="section" id="A5">
-        <p id="name">杨东<br>汪承恒<br>魏文轩<br>唐咏<br>李乾佑<br>巫伟泓</p>
-        <p id="logotext">©YINGCHUANCHAOXU</p>
+        
 
+
+        <section class="team-one" id="team">       
+            <div class="container">
+                <div class="title text-center">
+                    <p>参与人员</p>
+                    <h3>Team Members</h3>
+                </div>  
+                <div class="row">
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div><!-- /.team-one__circle -->
+                            <div class="inner">
+                                <h3>巫伟泓</h3>
+                                
+                                <div class="image">
+                                <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=784641715&s=640" alt="">
+                                </div><!-- /.team-one__image -->
+                                <div class="social">
+                                    <p>web应用<br>MQTT<br>温湿度传感器<br>视频流媒体</p>
+                                     
+                                </div> 
+                            </div> 
+                        </div><!-- /.team-one__single -->
+                    </div><!-- /.introrow -->
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div> 
+                            <div class="inner">
+                                <h3>汪承恒</h3>
+                               
+                                <div class="image">
+                                    <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=1193975856&s=640" alt="">
+                                </div> 
+                                <div class="social">
+                                    
+                                    <p>MQTT<br>3D打印<br>GPRS<br>树莓派应用程序</p>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div> 
+                            <div class="inner">
+                                <h3>杨东</h3>
+                                
+                                <div class="image">
+                                    <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=1563721873&s=640" alt="">
+                                </div><!-- /.team-one__image -->
+                                <div class="social">
+                                    <p>3D打印<br>数据库<br>结构设计<br></p>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div> 
+                            <div class="inner">
+                                <h3>魏文轩</h3>
+                                
+                                <div class="image">
+                                    <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=2799597100&s=640" alt="">
+                                </div> 
+                                <div class="social">
+                                    <p>土壤湿度传感器<br>光照传感器<br>摄像头</p>
+                                </div> 
+                            </div>
+                             
+                        </div> 
+                    </div> 
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div> 
+                            <div class="inner">
+                                <h3>唐咏</h3>
+                                
+                                <div class="image">
+                                    <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=2486083158&s=640" alt="">
+                                </div> 
+                                <div class="social">
+                                    <p>水泵<br>大气压强传感器</p>
+                                </div> 
+                            </div>
+                             
+                        </div> 
+                    </div>
+                    <div class="introrow">
+                        <div class="single">
+                            <div class="circle"></div> 
+                            <div class="inner">
+                                <h3>李乾佑</h3>
+                                
+                                <div class="image">
+                                    <img class="headimg" src="http://q1.qlogo.cn/g?b=qq&nk=390279616&s=640" alt="">
+                                </div> 
+                                <div class="social">
+                                    <p>本地应用程序</p>
+                                     
+                                </div> 
+                            </div>
+                             
+                        </div> 
+                    </div>
+                </div> 
+                
+            </div> 
+        </section>
+        <h2>©yingchuanchaoxu</h2>
     </section>
     </div>
 
     
     
-    <script src="./static/circle1.js"></script>
-    <script src="./static/circle2.js"></script>
+    <script src="./static/js/circle1.js"></script>
+    <script src="./static/js/circle2.js"></script>
 </body>
 </html>
 
