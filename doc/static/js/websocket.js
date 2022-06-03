@@ -22,7 +22,7 @@ client.on('connect', function () {
 
 client.on('message', function (topic,message) {
     // message is Buffer
-
+    if(message.isBuffer){
     const buf=message.toString();
     const obj = JSON.parse(buf);
     console.log(obj)
@@ -31,4 +31,5 @@ client.on('message', function (topic,message) {
     dirthumpdata=Number(obj.dirthump)
     sundata=Number(obj.sun)
     pressdata=Number(obj.press)
+  }
   })
