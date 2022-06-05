@@ -10,7 +10,7 @@ const options = {
 var client = mqtt.connect('ws://124.223.169.5:8083', options)
 client.on('connect', function () {
   console.log('Connected')
-  client.subscribe('test1',{qos:2},function(error){
+  client.subscribe('test1',{qos:1},function(error){
     if(!error){
       console.log("subscribe success")
     }
@@ -22,7 +22,6 @@ client.on('connect', function () {
 
 client.on('message', function (topic,message) {
     // message is Buffer
-    if(message.isBuffer){
     const buf=message.toString();
     const obj = JSON.parse(buf);
     console.log(obj)
@@ -31,5 +30,4 @@ client.on('message', function (topic,message) {
     dirthumpdata=Number(obj.dirthump)
     sundata=Number(obj.sun)
     pressdata=Number(obj.press)
-  }
   })
