@@ -5,7 +5,8 @@ var dirthump=0
 var rasdata=0
 var tempdata=0
 var humpdata=0
-var airpress=0
+var sum=0
+var sundata=0
 if (!Highcharts.theme) {
     Highcharts.setOptions({
         chart: {
@@ -106,7 +107,7 @@ Highcharts.chart('container1', {
                     y: tempdata
                 }]);//temperature change
 		series1.setData([{
-                    y: airpress
+                    y: sundata
                 }]);
 		series2.setData([{
                     y: humpdata
@@ -196,15 +197,15 @@ Highcharts.chart('container1', {
         valueSuffix:'℃',
         }
     }, {
-        name: '大气压强',
+        name: '光强',
         data: [{
             color: Highcharts.getOptions().colors[1],
             radius: '87%',
             innerRadius: '63%',
-            y: airpress
+            y: sum
         }],
 	tooltip:{
-        valueSuffix:'kpa',
+        valueSuffix:'lum',
         }
     }, {
         name: '大气湿度',

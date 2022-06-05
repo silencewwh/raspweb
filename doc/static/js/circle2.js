@@ -1,5 +1,5 @@
-var sun=0
-var sundata=0
+var press=0
+var pressdata=0
 $(document).ready(function() {  
     var chart = {
        type: 'spline',
@@ -11,7 +11,7 @@ $(document).ready(function() {
              var series = this.series[0];
              setInterval(function () {
                 var x = (new Date()).getTime(), // current time
-                y = sundata;
+                y = pressdata;
                 series.addPoint([x, y], true, true);
              }, 5000);
           }
@@ -63,14 +63,14 @@ $(document).ready(function() {
        enabled: false
     };
     var series= [{
-       name: 'Random data',
+       name: '大气压强动态表',
        data: (function () {
           // generate an array of random data
           var data = [],time = (new Date()).getTime(),i;
           for (i = -19; i <= 0; i += 1) {
              data.push({
                 x: time + i * 1000,
-                y: sun
+                y: press
              });
           }
           return data;
