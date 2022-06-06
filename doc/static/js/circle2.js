@@ -18,7 +18,7 @@ $(document).ready(function() {
        }
     };
     var title = {
-       text: '光照强度'   
+       text: '大气压强'   
     };   
     var xAxis = {
        type: 'datetime',
@@ -26,7 +26,7 @@ $(document).ready(function() {
     };
     var yAxis = {
        title: {
-          text: '光强'
+          text: '压强'
        },
        plotLines: [{
           value: 0,
