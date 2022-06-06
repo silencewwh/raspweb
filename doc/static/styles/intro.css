@@ -187,9 +187,9 @@
 }
 
 .introrow{
-    flex:0 0 15%;
+    flex:0 0 18%;
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     /* padding-right: 15px; */
     padding-left: 15px;
 }
